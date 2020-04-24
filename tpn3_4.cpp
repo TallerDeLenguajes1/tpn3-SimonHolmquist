@@ -85,10 +85,10 @@ float mostrarProductos(Producto *producto, int cant){
     float suma = 0;
     forn(i,cant)
     {
-        cout<<"\n\nID del producto: "<<producto[i].ProductoID
-            <<"\nCantidad: "<<producto[i].Cantidad
-            <<"\nTipo: "<<producto[i].TipoProducto;
-        cout<<fixed<<"\nPrecio unitario: $"<<producto[i].PrecioUnitario;
+        cout<<"\n\n\tID del producto: "<<producto[i].ProductoID
+            <<"\n\tCantidad: "<<producto[i].Cantidad
+            <<"\n\tTipo: "<<producto[i].TipoProducto;
+        cout<<fixed<<"\n\tPrecio unitario: $"<<producto[i].PrecioUnitario;
         suma+=precioProducto(&producto[i]);
     }
     return suma;
@@ -102,7 +102,7 @@ void mostrarClientes(Cliente *cliente, int cant){
             <<"\nNombre: "<<cliente[i].NombreCliente
             <<"\nCandidad de productos a pedir: "<<cliente[i].CantidadProductosAPedir;
         Total_cliente = mostrarProductos(cliente[i].Productos,cliente[i].CantidadProductosAPedir);
-        cout<<fixed<<"\nTotal: $"<<Total_cliente;
+        cout<<fixed<<"\n\n\tTotal: $"<<Total_cliente;
         cout<<'\n';
     }
 }
